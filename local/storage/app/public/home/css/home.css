@@ -1,0 +1,25 @@
+
+.body{
+	margin-bottom: 175px;
+}
+.body_title{
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 50px;
+	font-weight: 500;
+}
+.body_content_p{
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 25px;
+	font-weight: 500;
+}
+.body_content {
+	font-size: 14px;
+	font-weight: 500;
+}
+.body_content p {
+	margin-bottom: 25px;
+}

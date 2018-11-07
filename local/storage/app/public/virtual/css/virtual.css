@@ -1,0 +1,252 @@
+.virtual-head{
+	background: url(../image/1.png) no-repeat center;
+	background-size: cover;
+	height: 487px;
+}
+.virtual-service{
+	width: 930px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+.virtual-service-item{
+	flex: 0 0 33.33%;
+	margin: 25px auto;
+}
+.virtual-icon{
+	height: 100px;
+	width: 100px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	margin:auto;
+}
+.virtual-service-item>p{
+	text-align: center;
+	font-size: 17px;
+	margin-top: 15px;
+	font-family: 'UTMAvo'
+}
+
+.virtual-service>p{
+	text-align: center;
+	font-size: 17px;
+	font-family: 'UTMAvo';
+}
+.virtual-table{
+	/*width: 650px;*/
+}
+.register-content{
+	background: #000;
+	border-radius: 15px;
+	padding: 40px;
+	width: 450px;
+}
+.register-control{
+	display: flex;
+	margin-bottom: 40px;
+}
+.register-label{
+	font-family: 'UTMAvo';
+	font-size: 22px;
+}
+.register-input{
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #eee;
+	margin-left: 40px;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	flex: 1;
+}
+.register-btn-control{
+	display: flex;
+}
+.register-btn{
+	margin:auto;
+}
+.register-select{
+	background: transparent;
+	border:1px solid #FFF;
+	color: #FFF;
+	margin-left: 40px;
+	outline: none;
+	flex: 1;
+	text-align-last: center;
+}
+.register-select{
+	font-family: 'UTMAvo';
+	background: #000;
+}
+.myTable{
+	margin: auto;
+}
+.myCell{
+	padding: 10px;
+	border:1px solid #000;
+}
+.myRow:first-child{
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+.myRow>.myCell:first-child{
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+}
+.myRow>.myCell{
+	text-align: center;
+	vertical-align: middle;
+}
+
+@media (max-width: 767px){
+	.virtual-head{
+		height: 285px;
+	}
+	.virtual-table{
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.register {
+		width: auto;
+		top: unset;
+		position: relative;
+		height: auto;
+	}
+	.register-content{
+		margin-right: 0;
+		width: 100%;
+		padding: 20px;
+		position: unset;
+		transform:none;
+		margin-bottom: 15px;
+	}
+	.register-control{
+		flex-wrap: wrap;
+	}
+	.register-input{
+		margin-left: 0;
+	}
+	.register-label,.register-input{
+		flex: 100%;
+	}
+	.register-select{
+		height: 40px;
+		margin-left: 0px;
+	}
+	.register-btn{
+		width: auto;
+	}
+}
+
+
+.vir_head{
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 25px;
+	padding-bottom: 20px;
+	color: #5099df;
+}
+.vir_title {
+	font-size: 36px;
+	font-weight: 500;
+	margin-bottom: 24px;
+}
+
+.vir_summary {
+	margin-bottom: 100px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 30px;
+}
+.vir_summary p{
+	margin-bottom: 0;
+}
+.vir_item{
+	margin-bottom: 120px;
+}
+.vir_item_title {
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 42px;
+	padding-bottom: 20px;
+	color: #5099df;
+	font-weight: 500;
+}
+
+.vir-service{
+	width: 80%;
+	margin: 0 auto 30px;
+}
+.vir-service-item{
+	flex: 1;
+}
+.vir-icon{
+	width: 60px;
+	height: 60px;
+	background-size: 100%;
+	margin: 0 auto 20px;
+}
+.vir_service_content{
+	text-align: center;
+}
+
+.vir_item_summary {
+	margin-bottom: 35px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 30px;
+}
+.vir_item_summary p {
+	margin-bottom: 0;
+}
+.vir_button {
+	width: 360px;
+	margin: 0 auto;
+	display: flex;
+}
+.vir_button button {
+	flex: 1;
+	background: #fff;
+	height: 50px;
+}
+button.btnPopUp {
+	border: 1px solid #ccc;
+	margin-right: 30px;
+}
+button.btnRegis {
+	border: 1px solid #000;
+}
+
+
+.vir_item_content{
+	margin-bottom: 35px;
+}
+.vir_item_content_main:first-child{
+	text-align: right;
+	margin-right: 30px;
+}
+.vir_item_content_main{
+	flex: 1;
+}
+.vir_item_content_main p {
+	margin-bottom: 30px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.vir_banner_main{
+	margin-bottom: 115px;
+}
+.vir_banner_main img{
+	width: 100%;
+}
+
+
+
+.pack-form{
+	margin-top: 100px;
+}

@@ -1,0 +1,31 @@
+.image-item{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 180px;
+	width: 216px;
+	background-color: #eee;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.image-item>a{
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	color: red!important;
+	font-weight: bold;
+	font-size: 20px;
+	cursor: pointer;
+}
+.image-container{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#add-image{
+	cursor: pointer;
+}
+#button{
+	display: none;
+}

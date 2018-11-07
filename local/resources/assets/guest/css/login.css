@@ -1,0 +1,91 @@
+#login{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+}
+.login-form{
+    padding: 30px 40px;
+    background-color: var(--bg-1);
+    width: 50%;
+    border-radius: 15px;
+    margin-top: calc( var(--header-height)/2 );
+}
+.login-form h5{
+    position: relative;
+    font-size: var(--font-size-h5);
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+.login-form h5:after{
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: var(--bg-4);
+    height: 5px;
+    width: 325px;
+    left: 0;
+    top: calc(100% + 10px);
+}
+.login-form input{
+    width: 100%;
+    height: 36px;
+    border-radius: 15px;
+    line-height: 36px;
+    padding: 0 20px;
+    border: 1px solid #d5d5d5;
+    margin-bottom: 15px;
+    outline: none;
+    font-size: var(--font-size-1);
+}
+.login-form button{
+    width: 225px;
+    height: 36px;
+    border-radius: 15px;
+    line-height: 36px;
+    padding: 0 20px;
+    border: 1px solid #d5d5d5;
+    margin-bottom: 20px;
+    color: var(--text-2);
+    background-color: var(--bg-4);
+}
+.login-window{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+.xstartup{
+    width: 50%;
+    left: 75%;
+    margin-top: calc( var(--header-height)/2 );
+}
+
+.forgot-password{
+    width: 100%;
+    padding: 35px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    margin-top: 50px;
+}
+.forgot-password input{
+    height: 56px;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid var(--bg-5);
+    outline: none;
+    padding: 0 10px;
+}
+.forgot-password button{
+    border-radius: 15px;
+    height: 56px;
+    width: 250px;
+    line-height: 56px;
+    background-color: var(--bg-4);
+    color: var(--text-2);
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}

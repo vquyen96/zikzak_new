@@ -1,0 +1,46 @@
+.service-menu li{
+	display: inline-block;
+	padding: 0 20px;
+	cursor: pointer;
+	margin-left: 0;
+}
+.service-menu li:first-child{
+	border-right: 10px solid #d87824;
+}
+.service-menu li.active{
+	color: #d87824!important;
+	position: relative;
+}
+.myTable{
+	width: 100%;
+}
+.myCell{
+	padding: 20px;
+	border:1px solid #000;
+}
+.myRow:first-child{
+	font-weight: bold;
+	text-align: center;
+}
+.myRow>.myCell:first-child{
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	width: 230px;
+}
+.myRow>.myCell:last-child{
+	text-align: center;
+	vertical-align: middle;
+}
+.service-01,.service-02{
+	display: none;
+}
+.service-01.active,.service-02.active{
+	display: block;
+}
+
+@media (max-width: 1023px){
+	.service-menu{
+		display: flex;
+	}
+}

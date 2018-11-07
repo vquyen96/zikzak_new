@@ -1,0 +1,39 @@
+.my-container{
+	display: flex;
+	flex-wrap: wrap;
+	width: 900px;
+	margin: auto;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+.my-column{
+	flex: 1;
+}
+.my-column:first-child,.my-row:first-child>input{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.my-row:last-child{
+	height: 50px;
+	line-height: 50px;
+}
+.my-row{
+	height: 40px;
+	line-height: 40px;
+	border:1px solid;
+	border-collapse: collapse;
+}
+.my-container input,.my-container button{
+	border:none;
+	outline: none;
+}
+.my-container input[type='text']{
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+.my-container button{
+	height: 40px;
+	padding:0 20px;
+}

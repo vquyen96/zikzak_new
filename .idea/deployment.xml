@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="zikzak">
+    <serverData>
+      <paths name="zik_zak">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/domains/zikzak-co.vn/public_html" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="zikzak">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/domains/zikzak-co.vn/public_html" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

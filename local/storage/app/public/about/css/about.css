@@ -1,0 +1,145 @@
+.about-head{
+	background: url(../image/1.png) no-repeat center;
+	background-size: cover;
+	height: 487px;
+
+}
+
+.about-content{
+	margin-bottom: -150px;
+	background: url(../image/about.png) no-repeat bottom;
+	background-size: contain;
+	min-height: 1800px;
+	max-width: 1440px;
+	margin:auto;
+}
+
+.about-item{
+	position: absolute;
+}
+.about-item h4{
+	font-size: 40px;
+	color: #000;
+	padding: 30px 0;
+	font-weight: bold;
+	font-family: 'UTMAvo';
+	position: relative;
+	margin-bottom: 120px;
+}
+.about-item h4:after{
+	content: "" ;
+	position: absolute;
+	width: 165px;
+	height: 20px;
+	background: #ed4048;
+	top: 100%;
+	left: 0;
+}
+.about-item p{
+	font-family: 'UTMAvo';
+	font-size: 17px;
+	color: #666666;
+}
+.destination{
+	top: 100px;
+	right: 200px;
+	width: 300px;
+}
+.story{
+	top:100px;
+	left: 440px;
+	width: 355px;
+}
+.view{
+	top: 700px;
+	right: 200px;
+	width: 300px;
+}
+@media (max-width: 1023px){
+	.about-content{
+		min-height: 1500px;
+		background-size: auto 1500px;
+	}
+	.story{
+		left: 30px;
+	}
+	.view,.destination{
+		right: 30px;
+	}
+}
+@media (max-width: 767px){
+	.about-head{
+		height: 285px;
+	}
+	.about-item{
+		position: unset;
+		padding:0 15px;
+	}
+	.about-item h4{
+		margin-bottom: 40px;
+	}
+	.story,.view,.destination{
+		width: auto;
+	}
+	.about-content{
+		background-size: auto 1100px;
+		padding-bottom: 510px;
+	}
+}
+
+
+
+
+.main_title{
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 25px;
+	padding-bottom: 20px;
+	color: #5099df;
+}
+.about_item{
+	margin-bottom: 100px;
+}
+.about_item_title{
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 25px;
+	font-weight: 500;
+}
+.about_item_content{
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 14px;
+
+	display: flex;
+}
+.about_item_content_small{
+	flex: 1;
+}
+.about_item_content_small:first-child{
+	margin-right: 27px;
+}
+.about_item_content_small_title{
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 24px;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+.about_item_content.smail{
+	width: 750px;
+	margin: auto;
+	text-align: center;
+}
+.about_banner_foot{
+
+}
+.about_banner_foot img{
+	width: 100%;
+}
+
+
+
+
+

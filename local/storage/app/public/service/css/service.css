@@ -1,0 +1,217 @@
+.service-head{
+	background: url(../image/1.png) no-repeat center;
+	background-size: cover;
+	height: 487px;
+}
+
+.service-menu{
+
+}
+.service-menu li{
+	display: inline-block;
+	padding: 0 20px;
+	cursor: pointer;
+}
+.service-menu li:first-child{
+	border-right: 10px solid #000;
+}
+.service-menu li.active{
+	color: #000!important;
+	position: relative;
+}
+.service-menu li.active:before{
+	content: "";
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 20px;
+	width: 90%;
+	background: #ed4048;
+}
+.service-menu li.active:after{
+	content: "";
+	position: absolute;
+	bottom: -70px;
+	left: 5%;
+	width: 24px;
+	height: 40px;
+	border-top: 20px solid #000;
+	border-right: 12px solid transparent;
+	border-left: 12px solid transparent;
+}
+.register-content{
+	background: #000;
+	border-radius: 15px;
+	padding: 40px;
+	width: 96%;
+}
+.register-control{
+	display: flex;
+	margin-bottom: 40px;
+}
+.register-label{
+	font-family: 'UTMAvo';
+	font-size: 22px;
+}
+.register-input{
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #eee;
+	margin-left: 40px;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	flex: 1;
+}
+.register-btn-control{
+	display: flex;
+}
+.register-btn{
+	margin:auto;
+}
+.register-select{
+	background: transparent;
+	border:1px solid #FFF;
+	color: #FFF;
+	margin-left: 40px;
+	outline: none;
+	flex: 1;
+	text-align-last: center;
+}
+.register-select{
+	font-family: 'UTMAvo';
+	background: #000;
+}
+
+.service-left{
+	width: 460px;
+}
+.service-text{
+	color: #666;
+	font-family: 'UTMAvo';
+	padding: 20px 0;
+	width: 96%;
+}
+.service-right{
+	flex: 1;
+	font-family: 'UTMAvo';
+}
+.service-01,.service-02{
+	display: none;
+}
+.service-01.active,.service-02.active{
+	display: block;
+}
+.myCell{
+	padding: 20px;
+	border:1px solid #000;
+}
+.myRow:first-child{
+	font-weight: bold;
+	text-align: center;
+}
+.myRow>.myCell:first-child{
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+}
+.myRow>.myCell:last-child{
+	text-align: center;
+	vertical-align: middle;
+}
+.mobile-hide{
+	display: block;
+}
+.mobile-show{
+	display: none;
+	margin-top: 25px;
+}
+@media (max-width: 1023px){
+	.mobile-hide{
+			display: none;
+	}
+	.mobile-show{
+			display: block;
+	}
+}
+@media (max-width: 767px){
+	.service-head{
+		height: 285px;
+	}
+	.service-menu{
+		display: flex;
+	}
+	.myTable{
+		max-width: 100%;
+	}
+	.myCell{
+		padding:5px;
+	}
+	.service-right{
+		max-width: 100%;
+	}
+	.service-left{
+		width: 100%;
+		padding:0 15px;
+	}
+	.register {
+		width: auto;
+		top: unset;
+		position: relative;
+		height: auto;
+	}
+	.register-content{
+		margin-right: 0;
+		width: 100%;
+		padding: 20px;
+		position: unset;
+		transform:none;
+		margin-bottom: 15px;
+	}
+	.register-control{
+		flex-wrap: wrap;
+	}
+	.register-input{
+		margin-left: 0;
+	}
+	.register-label,.register-input{
+		flex: 100%;
+	}
+	.register-select{
+		height: 40px;
+		margin-left: 0px;
+	}
+	.register-btn{
+		width: auto;
+	}
+}
+
+
+
+
+.service_item{
+	/*margin-bottom: 200px;*/
+}
+.service_item_title{
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 24px;
+	margin-bottom: 40px;
+	font-weight: 500;
+}
+.service_item_content{
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 26px;
+	margin-bottom: 30px;
+	height: 182px;
+	overflow: hidden;
+
+}
+.service_item_link a{
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px solid #000;
+	font-size: 14px;
+}

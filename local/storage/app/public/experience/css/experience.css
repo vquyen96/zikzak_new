@@ -1,0 +1,115 @@
+.experience-head{
+	background: url(../image/1.png) no-repeat center;
+	background-size: cover;
+	height: 487px;
+}
+
+.register-content{
+	background: #000;
+	border-radius: 15px;
+	padding: 60px;
+	width: 460px;
+	margin: auto;
+}
+.register-control{
+	display: flex;
+	margin-bottom: 40px;
+}
+.register-label{
+	font-family: 'UTMAvo';
+	font-size: 22px;
+}
+.register-input{
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #eee;
+	margin-left: 40px;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	flex: 1;
+}
+.register-btn-control{
+	display: flex;
+}
+.register-btn{
+	margin:auto;
+}
+
+
+.experience-text{
+	width: 460px;
+}
+
+.experience-h4{
+	font-size: 22px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000;
+}
+
+.experience-text p{
+	color: #666;
+	font-size: 17px;
+}
+
+.experience-img{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin:auto;
+	height: 750px;
+	width: 100%;
+}
+
+@media (max-width: 767px){
+	.experience-head{
+		height: 285px;
+	}
+	.experience-text{
+		width: 100%;
+		padding:0 15px;
+	}
+	.register {
+		width: auto;
+		top: unset;
+		position: relative;
+		height: auto;
+	}
+	.register-content{
+		margin-right: 0;
+		width: 100%;
+		padding: 20px;
+		position: unset;
+		transform:none;
+		margin-bottom: 15px;
+	}
+	.register-control{
+		flex-wrap: wrap;
+	}
+	.register-input{
+		margin-left: 0;
+	}
+	.register-label,.register-input{
+		flex: 100%;
+	}
+	.register-select{
+		height: 40px;
+		margin-left: 0px;
+	}
+	.register-btn{
+		width: auto;
+	}
+
+}
+
+
+
+
+.exp_header{
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 25px;
+	padding-bottom: 20px;
+	color: #5099df;
+}
