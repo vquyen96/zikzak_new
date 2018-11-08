@@ -8,4 +8,8 @@ $(document).ready(function(){
 	$('.plus-button').click(function(){
 		$('.dropdown').slideToggle();
 	});
+
+	$('.btn_show_nav').click(function(){
+		$('.header_mobi_nav').slideToggle();
+	});
 });

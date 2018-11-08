@@ -25,7 +25,7 @@
 			<!--</a>-->
 		</div>
 	</div>
-	<div class="header">
+	<div class="header hide768">
 		<ul>
 			<li>
 				<a href="{{ asset('about') }}">
@@ -59,5 +59,45 @@
 			</li>
 
 		</ul>
+	</div>
+	<div class="header_mobi show768">
+		<div class="header_mobi_logo">
+			<a href="{{ asset('/') }}">
+				<img src="home/image/logo_zikzak.png" alt="">
+			</a>
+
+		</div>
+		<div class="btn_show_nav">
+			<i class="fas fa-bars"></i>
+		</div>
+		<div class="header_mobi_nav">
+			<ul>
+				<li>
+					<a href="{{ asset('about') }}">
+						about
+					</a>
+				</li>
+				<li>
+					<a href="{{ asset('service') }}">
+						services
+					</a>
+				</li>
+				<li>
+					<a href="{{ asset('news') }}">
+						news
+					</a>
+				</li>
+				<li>
+					<a href="{{ asset('community') }}">
+						community
+					</a>
+				</li>
+				<li>
+					<a href="{{ asset('experience') }}">
+						try it for free
+					</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>

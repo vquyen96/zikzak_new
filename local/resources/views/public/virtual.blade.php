@@ -144,7 +144,7 @@ Dịch vụ Văn phòng ảo của Zikzak Coworking Space là hình thức văn 
 
 	</div>
     <div class="vir_banner_main">
-        <img src="virtual/image/Layer 12.png" alt="">
+        <img src="home/image/{{ $virtual1->banner_image}}" alt="">
     </div>
     <div class="container">
         <div class="row pack-form">

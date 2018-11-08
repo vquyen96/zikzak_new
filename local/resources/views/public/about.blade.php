@@ -62,7 +62,7 @@
                         Tầm nhìn & sứ mệnh
                     </div>
                     <div class="about_item_content">
-                        <div class="about_item_content_small" style="background: url('about/image/19 (merged).png') no-repeat center /cover"></div>
+                        <div class="about_item_content_small img" style="background: url('home/image/{{ $about1->banner_image }}') no-repeat center /cover"></div>
                         <div class="about_item_content_small">
                             <div class="about_item_content_small_title border_bot">
                                 Đồng hành cùng Startup
@@ -87,6 +87,7 @@
         </div>
     </div>
     <div class="about_banner_foot">
-        <img src="about/image/8 copy.png" alt="">
+        <img src="home/image/{{ $about2->banner_image}}" alt="">
+
     </div>
 @stop

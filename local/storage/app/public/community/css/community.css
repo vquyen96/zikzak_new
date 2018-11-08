@@ -68,20 +68,22 @@
 	margin-bottom: 25px;
 }
 
-.community-avatar{
-	height: 350px;
-	width: 350px;
+.community-avatar {
+	width: 100%;
+	max-width: 350px;
 	border-radius: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	margin:auto;
-	/*box-shadow: 7px 0px 3px #c3c3c3;*/
+	margin: auto;
+	/* box-shadow: 7px 0px 3px #c3c3c3; */
 	margin-bottom: 36px;
 	overflow: hidden;
 }
-.community-avatar img{
-	width: 100%;
+.community-avatar:after {
+	content: '';
+	display: block;
+	padding-bottom: 100%;
 }
 .community_ceo{
 	margin-bottom: 100px;
@@ -106,7 +108,7 @@
 	flex: 0 0 25%;
 	padding:10px;
 	text-align: center;
-	margin:auto;
+	margin:0 auto 30px;
 }
 .mentor-name{
 	font-size: 22px;

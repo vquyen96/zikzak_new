@@ -250,3 +250,36 @@ button.btnRegis {
 .pack-form{
 	margin-top: 100px;
 }
+
+
+@media screen and (max-width: 768px){
+	.vir-service {
+		width: 100%;
+	}
+	.vir-icon {
+		width: 30px;
+		height: 30px;
+	}
+	.vir_service_content {
+		text-align: center;
+		font-size: 10px;
+	}
+	.vir_button {
+		width: 100%;
+	}
+	.vir_item_content {
+		margin-bottom: 35px;
+		flex-direction: column;
+	}
+	.vir_item_content_main:first-child {
+		text-align: left;
+		margin-right: 30px;
+	}
+	.myTable {
+		min-width: 500px;
+		margin-right: 1rem;
+	}
+	.modal-body{
+		overflow: auto;
+	}
+}

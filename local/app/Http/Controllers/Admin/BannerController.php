@@ -43,4 +43,12 @@ class BannerController extends Controller
 		$banner->save();
 		return back();
 	}
+
+	public function getDelete($id){
+	    $ban = Banner::find($id);
+        File::delete('local/storage/app/public/home/image/'.$ban->banner_image,'local/storage/app/public/home/image/resized-'.$ban->banner_image);
+        $ban->delete();
+        return back();
+
+    }
 }

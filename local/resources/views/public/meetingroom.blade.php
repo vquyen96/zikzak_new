@@ -114,11 +114,11 @@
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-8">
                     <div class="row">
-                        <div class="col-12 col-md-6 col-lg-5">
+                        <div class="col-6 col-md-6 col-lg-5">
                             <div class="meeting-img meeting-img-tall"
                                  style="background-image: url('meeting/image/{{ $meeting[2]->img1 }}')"></div>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-7">
+                        <div class="col-6 col-md-6 col-lg-7">
                             <div class="meeting-img meeting-img-tall"
                                  style="background-image: url('meeting/image/{{ $meeting[2]->img2 }}')"></div>
                         </div>

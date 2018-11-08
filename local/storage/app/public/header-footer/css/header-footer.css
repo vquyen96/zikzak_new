@@ -404,3 +404,96 @@ li.active {
 	right: 0;
 
 }
+
+
+.header_mobi {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+.header_mobi_logo {
+	text-align: center;
+	padding: 10px 0;
+}
+.header_mobi_logo img {
+	width: 125px;
+}
+
+.btn_show_nav {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	color: #fff;
+	font-size: 24px;
+	z-index: 2;
+}
+
+.show768{
+	display: none;
+}
+.header_mobi_nav {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: #fffc;
+	z-index: 2;
+	display: none;
+}
+.header_mobi_nav ul {
+	padding: 0;
+	margin: 0;
+	background: #fff;
+}
+.header_mobi_nav ul li {
+	list-style: none;
+}
+.header_mobi_nav ul li a {
+	color: #000;
+	font-size: 18px;
+	text-decoration: none;
+	padding: 10px 0;
+	text-align: center;
+	display: block;
+	text-transform: uppercase;
+	font-weight: 500;
+	border-bottom: 1px solid #ccc;
+}
+.carousel-indicators{
+	z-index: 1;
+}
+@media screen and (max-width: 768px){
+	.show768{
+		display: block;
+	}
+	.hide768{
+		display: none;
+	}
+	.carousel_head_banner:after{
+		padding-top: 60vh;
+	}
+	.bannerHead:after{
+		height: 30vh;
+
+	}
+
+	.paginate_center {
+		overflow: auto;
+	}
+	.ul.paginationCourseAll li {
+
+		margin: 0 3px;
+	}
+	a.pageLink {
+		padding: 0px 8px;
+
+	}
+	.ctrlq.fb-button {
+		width: 40px !important;
+		height: 40px !important;
+		bottom: 15px !important;
+	}
+}

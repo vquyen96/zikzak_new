@@ -15,7 +15,17 @@ class Banner extends Model
 	const POSITION_HOME = 1;
 	const POSITION_ABOUT = 2;
 	const POSITION_SERVICE = 3;
-	const POSITION_NEWS = 4;
-	const POSITION_COMMUNITY = 5;
-	const POSITION_TRY_IT = 6;
+    const POSITION_VIRTUAL = 4;
+    const POSITION_PACK = 5;
+    const POSITION_MEETING = 6;
+
+	const POSITION_NEWS = 7;
+	const POSITION_COMMUNITY = 8;
+	const POSITION_TRY_IT = 9;
+
+    const POSITION_ABOUT_1 = 10;
+    const POSITION_ABOUT_2 = 11;
+    const POSITION_VIRTUAL_1 = 12;
+
+
 }

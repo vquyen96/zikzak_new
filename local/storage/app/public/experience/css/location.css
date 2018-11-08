@@ -47,3 +47,19 @@ form {
     border: 1px solid #000;
     font-weight: 500;
 }
+
+@media screen and (max-width: 768px){
+    .exp_left {
+        text-align: left;
+    }
+    .exp_h3.border_bot.right {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .exp_h3.border_bot.right:after {
+        left: 0;
+    }
+    .exp_input {
+        width: 100%;
+    }
+}

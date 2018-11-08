@@ -23,5 +23,6 @@
 		<li class=""><a @if( Request::segment(2)=='location' ) class="active" @endif href="{{ asset('admin/location') }}"><i class="fas fa-map-marker-alt"></i></i> <span>Vị trí</span></a></li>
 		<li class=""><a @if( Request::segment(2)=='member' ) class="active" @endif href="{{ asset('admin/member') }}"><i class="far fa-address-card"></i> <span>Thành viên</span></a></li>
 		<li class=""><a @if( Request::segment(2)=='content' ) class="active" @endif href="{{ asset('admin/content') }}"> <i class="fas fa-clipboard-list"></i> <span>Nội dung</span></a></li>
+		<li class=""><a @if( Request::segment(2)=='meeting' ) class="active" @endif href="{{ asset('admin/meeting') }}"> <i class="fab fa-black-tie"></i> <span>Phòng họp</span></a></li>
 	</ul>
 </div>

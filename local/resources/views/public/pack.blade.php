@@ -38,10 +38,10 @@ Làm việc hiệu quả hơn với giá chỉ từ 69K. Trở thành thành vi�
 			</div>
 		</div>
 		@foreach($packs as $key=>$pack)
-			<div class="pack_item d-flex {{ $key%2 ? 'flex-row-reverse' : '' }}">
-				<div class="pack_item_left {{ $key%2 ? '' : 'mr-4' }}" style="background: url('pack/image/{{$pack->pack_image}}') no-repeat center /cover">
+			<div class="pack_item d-flex {{ $key%2 ? 'flex_row_reverse' : '' }}">
+				<div class="pack_item_left {{ $key%2 ? '' : 'mr_4' }}" style="background: url('pack/image/{{$pack->pack_image}}') no-repeat center /cover">
 				</div>
-				<div class="pack_item_right {{ $key%2 ? 'mr-4 text-right' : '' }}">
+				<div class="pack_item_right {{ $key%2 ? 'mr_4 text-right' : '' }}">
 					<div class="pack_item_name border_bot {{ $key%2 ? 'right' : '' }}">
 						{{$pack->pack_name}}
 					</div>

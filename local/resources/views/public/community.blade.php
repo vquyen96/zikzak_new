@@ -36,8 +36,8 @@
 
             <div class="row justify-content-md-center community_ceo">
                 <div class="col-12 center">
-                    <div class="community-avatar">
-                        <img src="{{ '../public/member/image/resized-'.$ceo->img }}" alt="">
+                    <div class="community-avatar" style="background: url('{{ '../public/member/image/resized-'.$ceo->img }}') no-repeat center /cover">
+
                     </div>
                     <h6 class="community-name center">{{ $ceo->name }}</h6>
                     <div class="community-summary center">{!! $ceo->content !!}</div>

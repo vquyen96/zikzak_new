@@ -139,7 +139,25 @@
 	width: 100%;
 }
 
-
+@media screen and (max-width: 768px){
+	.about_item_content.smail{
+		width: 100%;
+	}
+	.about_item_content_small{
+		margin-right: 0 !important;
+	}
+	.about_item_content{
+		flex-direction: column;
+	}
+	.about_item_content_small.img{
+		margin-bottom: 25px;
+	}
+	.about_item_content_small.img:after {
+		content: '';
+		display: block;
+		padding-bottom: 56%;
+	}
+}
 
 
 

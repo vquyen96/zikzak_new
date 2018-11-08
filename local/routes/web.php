@@ -70,6 +70,7 @@ Route::group(['namespace' => 'Admin'], function() {
             Route::get('/','BannerController@getBanner');
             Route::post('add','BannerController@postAddBanner');
             Route::post('edit/{id}','BannerController@postEditBanner');
+            Route::get('delete/{id}','BannerController@getDelete');
         });
 
         Route::group(['prefix' => 'virtual'], function() {

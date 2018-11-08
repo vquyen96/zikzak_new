@@ -36,6 +36,9 @@ class IndexController extends Controller
         $data['view'] = About::where('about_name','view')->first();
         $data['value'] = About::where('about_name','value')->first();
         $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        $data['about1'] = Banner::where('banner_position', Banner::POSITION_ABOUT_1)->first();
+        $data['about2'] = Banner::where('banner_position', Banner::POSITION_ABOUT_2)->inRandomOrder()->first();
+
         return view('public.about',$data);
     }
 
@@ -100,6 +103,7 @@ class IndexController extends Controller
         $data['content1'] = Content::find(5);
         $data['content2'] = Content::find(6);
 
+        $data['virtual1'] = Banner::where('banner_position', Banner::POSITION_VIRTUAL_1)->first();
         return view('public.virtual',$data);
     }
 
