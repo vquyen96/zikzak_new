@@ -1,9 +1,13 @@
 @extends('admin.master')
 @section('css')
 <link rel="stylesheet" type="text/css" href="banner/css/banner.css">
+<link rel="stylesheet" type="text/css" href="base/css/bootstrap-toggle.min.css">
+
 @stop
 @section('javascript')
 <script type="text/javascript" src="banner/js/banner.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
 @stop
 @section('main')
 <div class="container-fluid zz-section">
@@ -15,7 +19,7 @@
 </div>
 
 @foreach($banners as $key => $banner)
-<form method="post" enctype="multipart/form-data" action="{{ asset('admin/banner/edit/'.$banner->banner_id) }}">
+<form method="post" enctype="multipart/form-data" action="{{ asset('admin/banner/edit/'.$banner->banner_id) }}" class="form_edit_banner">
 	<div class="container-fluid zz-section">
 		<div class="row">
 			<div class="col-12 col-md-12 col-lg-6">
@@ -23,8 +27,17 @@
 					<div class="box-body">
 						<div class="form-group">
 							{{--<label class="bold">Banner {{($key + 1)}}</label>--}}
-							<input type="file" class="file" name="banner_image" style="display: none" onchange="changeImg(this)">
-							<img class="add-image" src="../public/home/image/{{$banner->banner_image}}">
+							<input type="file" class="file" name="banner_image" style="display:{{ $banner->banner_video == "on" ? 'block' : 'none' }}"  onchange="changeImg(this)">
+							@if( $banner->banner_video == "on")
+								<video width="100%" controls>
+									<source src="{{ asset('local/public/home/image/'.$banner->banner_image) }}" type="video/mp4">
+									<source src="mov_bbb.ogg" type="video/ogg">
+									Trình duyệt không hỗ trợ
+								</video>
+								{{--<video src="{{ asset('local/public/home/image/'.$banner->banner_image) }}" width="100%"></video>--}}
+							@else
+								<img class="add-image" src="../public/home/image/{{$banner->banner_image}}">
+							@endif
 						</div>
 					</div>
 				</div>
@@ -65,12 +78,19 @@
 								<option value="{{ \App\Models\Banner::POSITION_VIRTUAL_1 }}" {{ $banner->banner_position == \App\Models\Banner::POSITION_VIRTUAL_1 ? 'selected' : '' }}>Virtual 1</option>
 							</select>
 						</div>
+						<div class="form-group">
+							<label class="bold">Video || Image</label>
+							<input type="checkbox" name="banner_video" data-toggle="toggle" data-on="Video" data-off="Image" class="" {{ $banner->banner_video == 'on' ? 'checked' : '' }}>
+							{{--<input required="" type="text" class="form-control"  placeholder="Tiêu đề dòng 1" name="banner_head1" value="{{$banner->banner_head1}}">--}}
+						</div>
 					</div><!-- /.box-body -->
 					<div class="box-footer">
 						<button type="submit" class="btn btn-primary">Save</button>
 						<a href="{{ asset('admin/banner/delete/'.$banner->banner_id) }}" class="btn btn-danger white">Xóa</a>
 					</div>
 				</div>
+
+
 			</div>
 		</div>
 	</div>

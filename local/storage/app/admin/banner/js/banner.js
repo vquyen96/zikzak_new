@@ -8,6 +8,18 @@ $(document).ready(function(){
         $('.banner-appended').show();
         $(window).scrollTop($(window).scrollTop() + 465);
     });
+
+    $('input[type=checkbox]').change(function() {
+        if($(this).is(":checked")) {
+            $(this).parents('.form_edit_banner').find('.add-image').hide();
+            $(this).parents('.form_edit_banner').find('input[type=file]').show();
+        }
+        else{
+            $(this).parents('.form_edit_banner').find('.add-image').show();
+            $(this).parents('.form_edit_banner').find('input[type=file]').hide();
+        }
+        // $('#textbox1').val($(this).is(':checked'));
+    });
 });
 
 function changeImg(input){
@@ -22,3 +34,4 @@ function changeImg(input){
         reader.readAsDataURL(input.files[0]);
     }
 }
+

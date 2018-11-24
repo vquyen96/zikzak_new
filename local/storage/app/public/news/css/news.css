@@ -206,7 +206,10 @@
 
 }
 
-
+.news_detail_content img {
+    max-width: 100%;
+    height: auto !important;
+}
 
 
 @media screen and (max-width: 768px){
@@ -225,6 +228,9 @@
     .news_head_left_title {
         font-size: 24px;
         margin-bottom: 15px;
+    }
+    .news_detail_title{
+        font-size: 24px;
     }
 
 

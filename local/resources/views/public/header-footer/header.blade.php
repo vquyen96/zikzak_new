@@ -11,7 +11,15 @@
 			<div class="carousel-inner">
 				@foreach($banners as $key=>$banner)
 					<div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-						<div class="carousel_head_banner" style="background: url('home/image/{{ $banner->banner_image }}') no-repeat center /cover"></div>
+						@if($banner->banner_video == 'on')
+							<video width="100%" autoplay muted loop >
+								<source src="{{ asset('local/public/home/image/'.$banner->banner_image) }}" type="video/mp4">
+								<source src="mov_bbb.ogg" type="video/ogg">
+								Trình duyệt không hỗ trợ
+							</video>
+						@else
+							<div class="carousel_head_banner" style="background: url('home/image/{{ $banner->banner_image }}') no-repeat center /cover"></div>
+						@endif
 					</div>
 				@endforeach
 			</div>

@@ -35,7 +35,10 @@ class IndexController extends Controller
         $data['story'] = About::where('about_name','story')->first();
         $data['view'] = About::where('about_name','view')->first();
         $data['value'] = About::where('about_name','value')->first();
-        $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        $data['banners'] = Banner::where('banner_position', Banner::POSITION_ABOUT)->get();
+        if ($data['banners'] == null || count($data['banners']) == 0){
+            $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        }
         $data['about1'] = Banner::where('banner_position', Banner::POSITION_ABOUT_1)->first();
         $data['about2'] = Banner::where('banner_position', Banner::POSITION_ABOUT_2)->inRandomOrder()->first();
 
@@ -45,19 +48,28 @@ class IndexController extends Controller
     public function getNews(){
         $data['first_news'] = News::orderBy('news_id','desc')->first();
         $data['news_list'] = News::where('news_id','<>',$data['first_news']->news_id)->orderBy('news_id','desc')->paginate(3);
-        $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        $data['banners'] = Banner::where('banner_position', Banner::POSITION_NEWS)->get();
+        if ($data['banners'] == null || count($data['banners']) == 0){
+            $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        }
         return view('public.news',$data);
     }
     public function getNewsDetail($slug){
         $data['news'] = News::where('news_slug',$slug)->first();
         $data['news_list'] = News::where('news_id','<>',$data['news']->news_id)->orderBy('news_id','desc')->paginate(3);
-        $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        $data['banners'] = Banner::where('banner_position', Banner::POSITION_NEWS)->get();
+        if ($data['banners'] == null || count($data['banners']) == 0){
+            $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        }
         return view('public.news-detail',$data);
     }
 
     public function getMeetingRoom(){
-        $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
-        $data['location'] = Location::all();
+        $data['banners'] = Banner::where('banner_position', Banner::POSITION_MEETING)->get();
+        if ($data['banners'] == null || count($data['banners']) == 0){
+            $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        }
+        $data['location'] = Location::orderBy('order', 'asc')->get();
         $data['content'] = Content::find(8);
 
         $data['meeting'] = Meeting::all();
@@ -66,8 +78,11 @@ class IndexController extends Controller
 
     public function getPack(){
         $data['packs'] = Pack::all();
-        $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
-        $data['location'] = Location::all();
+        $data['banners'] = Banner::where('banner_position', Banner::POSITION_PACK)->get();
+        if ($data['banners'] == null || count($data['banners']) == 0){
+            $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        }
+        $data['location'] = Location::orderBy('order', 'asc')->get();
         $data['content'] = Content::find(7);
         return view('public.pack',$data);
     }
@@ -77,8 +92,11 @@ class IndexController extends Controller
         $data['advices'] = Advice::all();
         $data['service_content'] = ServiceContent::find(1);
         $data['advice_content'] = ServiceContent::find(2);
-        $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
-//        $data['location'] = Location::all();
+        $data['banners'] = Banner::where('banner_position', Banner::POSITION_SERVICE)->get();
+        if ($data['banners'] == null || count($data['banners']) == 0){
+            $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        }
+//        $data['location'] = Location::orderBy('order', 'asc')->get();
         $data['virtual'] = Content::find(2);
         $data['pack'] = Content::find(3);
         $data['meeting'] = Content::find(4);
@@ -97,18 +115,25 @@ class IndexController extends Controller
 
         $data['standard'] = Virtual::find(1);
         $data['premium'] = Virtual::find(2);
-        $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
-        $data['location'] = Location::all();
+        $data['banners'] = Banner::where('banner_position', Banner::POSITION_VIRTUAL)->get();
+
+        if ($data['banners'] == null || count($data['banners']) == 0){
+            $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        }
+        $data['location'] = Location::orderBy('order', 'asc')->get();
 
         $data['content1'] = Content::find(5);
         $data['content2'] = Content::find(6);
 
-        $data['virtual1'] = Banner::where('banner_position', Banner::POSITION_VIRTUAL_1)->first();
+        $data['virtual1'] = Banner::where('banner_position', Banner::POSITION_VIRTUAL_1)->orderByDesc('banner_id')->first();
         return view('public.virtual',$data);
     }
 
     public function getCommunity(){
         $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        if ($data['banners'] == null || count($data['banners']) == 0){
+            $data['banners'] = Banner::where('banner_position', Banner::POSITION_COMMUNITY)->get();
+        }
         $data['ceo'] = Member::where('ceo', 1)->first();
         $data['member'] = Member::where('ceo', 0)->get();
         $data['content1'] = Content::find(9);
@@ -118,8 +143,11 @@ class IndexController extends Controller
     }
 
     public function getExperience(){
-        $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
-        $data['location'] = Location::all();
+        $data['banners'] = Banner::where('banner_position', Banner::POSITION_TRY_IT)->get();
+        if ($data['banners'] == null || count($data['banners']) == 0){
+            $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        }
+        $data['location'] = Location::orderBy('order', 'asc')->get();
         return view('public.experience', $data);
     }
 

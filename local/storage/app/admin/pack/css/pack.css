@@ -86,9 +86,22 @@
 	margin-left: 20px;
 	border-radius: 5px;
 }
-
+.pack-image{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	cursor: pointer;
+}
+.pack-image:after{
+	content: "";
+	display: block;
+	padding-top: 56.25%;
+}
 @media (max-width: 1023px){
 	.form-container{
 		margin-bottom: 15px;
 	}
 }
+
+

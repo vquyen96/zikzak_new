@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Pack;
+use Illuminate\Support\Facades\File;
 
 class PackController extends Controller
 {
@@ -23,6 +24,13 @@ class PackController extends Controller
         $pack1->pack_summary = $request->pack_summary;
         $pack1->pack_detail = $request->pack_detail;
         $pack1->facility = implode('|', array_merge( $request->facility ) ) ;
+
+        if( $request->has('pack_image') ){
+            File::delete('local/storage/app/public/pack/image/'.$pack1->pack_image,'local/storage/app/public/pack/image/resized-'.$pack1->pack_image);
+
+            $pack1->pack_image = saveImage([$request->pack_image],700,'public/pack/image');
+        }
+
         $pack1->save();
         return back();
     }
@@ -34,6 +42,12 @@ class PackController extends Controller
         $pack1->pack_summary = $request->pack_summary;
         $pack1->pack_detail = $request->pack_detail;
         $pack1->facility = implode('|', array_merge( $request->facility ) ) ;
+        if( $request->has('pack_image') ){
+            File::delete('local/storage/app/public/pack/image/'.$pack1->pack_image,'local/storage/app/public/pack/image/resized-'.$pack1->pack_image);
+
+            $pack1->pack_image = saveImage([$request->pack_image],700,'public/pack/image');
+        }
+
         $pack1->save();
         return back();
     }
@@ -45,8 +59,16 @@ class PackController extends Controller
         $pack1->pack_summary = $request->pack_summary;
         $pack1->pack_detail = $request->pack_detail;
         $pack1->facility = implode('|', array_merge( $request->facility ) ) ;
+        if( $request->has('pack_image') ){
+            File::delete('local/storage/app/public/pack/image/'.$pack1->pack_image,'local/storage/app/public/pack/image/resized-'.$pack1->pack_image);
+
+            $pack1->pack_image = saveImage([$request->pack_image],700,'public/pack/image');
+//            dd($pack_image);
+        }
+
         $pack1->save();
         return back();
+
     }
 
     public function postEditPack4(Request $request){
@@ -56,6 +78,12 @@ class PackController extends Controller
         $pack1->pack_summary = $request->pack_summary;
         $pack1->pack_detail = $request->pack_detail;
         $pack1->facility = implode('|', array_merge( $request->facility ) ) ;
+        if( $request->has('pack_image') ){
+            File::delete('local/storage/app/public/pack/image/'.$pack1->pack_image,'local/storage/app/public/pack/image/resized-'.$pack1->pack_image);
+
+            $pack1->pack_image = saveImage([$request->pack_image],700,'public/pack/image');
+        }
+
         $pack1->save();
         return back();
     }

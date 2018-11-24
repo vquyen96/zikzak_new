@@ -12,4 +12,11 @@ $(document).ready(function(){
 	$('.btn_show_nav').click(function(){
 		$('.header_mobi_nav').slideToggle();
 	});
+	setTimeout(function () {
+        // $('video').prop('muted',false);
+    },3000);
+
+    // // $('video').attr('data-keepplaying', '');
+	// // $('video').play();
+    // document.getElementsByTagName('video').play();
 });

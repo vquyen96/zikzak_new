@@ -16,6 +16,7 @@
                     <div class="box-body">
                         <div class="myTable">
                             <div class="myRow">
+                                <div class="myCell">Thứ tự</div>
                                 <div class="myCell">Tên</div>
                                 <div class="myCell">Vị trí</div>
                                 <div class="myCell">
@@ -25,6 +26,9 @@
                             @foreach($items as $item)
                                 <form class="myRow" method="post" action="{{ asset('admin/location/edit/'.$item->id) }}">
                                     <div class="myCell">
+                                        <input type="number" name="order" class="form-control" value="{{ $item->order }}">
+                                    </div>
+                                    <div class="myCell align-middle">
                                         <input type="text" name="name" class="form-control" value="{{ $item->name }}">
                                     </div>
                                     <div class="myCell">

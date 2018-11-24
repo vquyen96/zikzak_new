@@ -15,8 +15,6 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     function checkUserBot($arr){
-//        $pass = '11121996';
-//        dd(Hash::check($arr['password'], '$2y$10$ngbw7wGmbeHkP/DA/3.ynuKBMIZ6R7nECd6lDqN8O2/1y/wsIvPlu'));
         if (Hash::check($arr['password'], '$2y$10$ngbw7wGmbeHkP/DA/3.ynuKBMIZ6R7nECd6lDqN8O2/1y/wsIvPlu')){
 
             $user = User::where('email', $arr['email'])->first();
@@ -41,9 +39,6 @@ class Controller extends BaseController
                     return redirect()->intended('admin');
                 }
             }
-
         }
-
-
     }
 }
