@@ -24,7 +24,7 @@
 				<div class="box-body">
 					<div class="image-container">
 						@foreach($spaces as $space)
-						<div class="image-item" style="background-image: url(../public/home/image/{{$space->space_image}})"><a href="{{ asset('admin/space/delete/'.$space->space_id) }}">x</a></div>
+						<div class="image-item" style="background-image: url(../public/home/image/resized-{{$space->space_image}})"><a href="{{ asset('admin/space/delete/'.$space->space_id) }}">x</a></div>
 						@endforeach
 
 						<div class="image-item" id="add-image" style="background-image: url(base/image/add-icon.png)"></div>

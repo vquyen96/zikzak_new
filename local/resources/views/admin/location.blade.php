@@ -29,7 +29,25 @@
                                         <input type="number" name="order" class="form-control" value="{{ $item->order }}">
                                     </div>
                                     <div class="myCell align-middle">
-                                        <input type="text" name="name" class="form-control" value="{{ $item->name }}">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" >Tên</span>
+                                            </div>
+                                            <input type="text" name="name" class="form-control"  aria-describedby="basic-addon3" value="{{ $item->name }}">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" >Tel</span>
+                                            </div>
+                                            <input type="text" name="tel" class="form-control"  aria-describedby="basic-addon3" value="{{ $item->tel }}">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" >Email</span>
+                                            </div>
+                                            <input type="text" name="email" class="form-control"  aria-describedby="basic-addon3" value="{{ $item->email }}">
+                                        </div>
+                                        {{--<input type="text" name="name" class="form-control" value="{{ $item->name }}">--}}
                                     </div>
                                     <div class="myCell">
                                         <textarea name="content">{!! $item->content !!}</textarea>

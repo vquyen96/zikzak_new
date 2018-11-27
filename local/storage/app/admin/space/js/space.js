@@ -1,6 +1,10 @@
+var this_add_image;
 $(document).ready(function(){
-	$('#add-image').click(function(){
-		$('#file').click();
+	$('.add-image').click(function(){
+	    console.log('ok');
+	    this_add_image = $(this);
+	    this_add_image.next().find('input[type=file]').click();
+		// $('#file').click();
 	});
 });
 
@@ -11,10 +15,10 @@ function changeImg(input){
         //Sự kiện file đã được load vào website
         reader.onload = function(e){
             //Thay đổi đường dẫn ảnh
-            $('#add-image').css('background-image','url(' + e.target.result + ')');
+            this_add_image.css('background-image','url(' + e.target.result + ')');
         }
         reader.readAsDataURL(input.files[0]);
-
-        $('#button').show();
+        this_add_image.next().find('button').show();
+        // $('#button').show();
     }
 }

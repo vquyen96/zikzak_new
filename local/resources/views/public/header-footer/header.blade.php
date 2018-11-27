@@ -4,8 +4,6 @@
 			<ol class="carousel-indicators">
 				@foreach($banners as $key=>$banner)
 					<li data-target="#carouselExampleIndicators" data-slide-to="{{ $key }}" class="{{ $key == 0 ? 'active' : '' }}"></li>
-
-
 				@endforeach
 			</ol>
 			<div class="carousel-inner">
@@ -64,6 +62,15 @@
 				<a href="{{ asset('experience') }}">
 					try it for free
 				</a>
+				<ul>
+					@foreach( $locations as $location)
+					<li>
+						<a href="{{ asset('location/'.$location->id) }}">
+							{{ $location->name }}
+						</a>
+					</li>
+					@endforeach
+				</ul>
 			</li>
 
 		</ul>

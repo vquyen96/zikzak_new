@@ -24,5 +24,6 @@
 		<li class=""><a @if( Request::segment(2)=='member' ) class="active" @endif href="{{ asset('admin/member') }}"><i class="far fa-address-card"></i> <span>Thành viên</span></a></li>
 		<li class=""><a @if( Request::segment(2)=='content' ) class="active" @endif href="{{ asset('admin/content') }}"> <i class="fas fa-clipboard-list"></i> <span>Nội dung</span></a></li>
 		<li class=""><a @if( Request::segment(2)=='meeting' ) class="active" @endif href="{{ asset('admin/meeting') }}"> <i class="fab fa-black-tie"></i> <span>Phòng họp</span></a></li>
+		<li class=""><a @if( Request::segment(2)=='image' ) class="active" @endif href="{{ asset('admin/image') }}"><i class="fas fa-images"></i><span>Hình ảnh</span></a></li>
 	</ul>
 </div>

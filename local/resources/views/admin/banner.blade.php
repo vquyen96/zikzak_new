@@ -124,7 +124,7 @@
 					</div>
 					<div class="box-body">
 						<div class="form-group">
-							<label class="bold">Title</label>
+							<label class="bold">Title1</label>
 							<input  type="text" class="form-control"  placeholder="Tiêu đề dòng 1" name="banner_head1">
 						</div>
 						{{--<div class="form-group">--}}
@@ -153,6 +153,11 @@
 								<option value="{{ \App\Models\Banner::POSITION_ABOUT_2 }}">About 2</option>
 								<option value="{{ \App\Models\Banner::POSITION_VIRTUAL_1 }}">Virtual 1</option>
 							</select>
+						</div>
+						<div class="form-group">
+							<label class="bold">Video || Image</label>
+							<input type="checkbox" name="banner_video" data-toggle="toggle" data-on="Video" data-off="Image" class="" {{ $banner->banner_video == 'on' ? 'checked' : '' }}>
+							{{--<input required="" type="text" class="form-control"  placeholder="Tiêu đề dòng 1" name="banner_head1" value="{{$banner->banner_head1}}">--}}
 						</div>
 					</div><!-- /.box-body -->
 					<div class="box-footer">

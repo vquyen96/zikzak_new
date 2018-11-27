@@ -326,7 +326,7 @@
 	transform: translateX(-50%);
 	z-index: 1;
 }
-.header ul{
+.header>ul{
 	display: flex;
 }
 .header ul li{
@@ -342,6 +342,15 @@
 	text-decoration: none;
 	line-height: 54px;
 	white-space: nowrap;
+}
+.header>ul li ul{
+	display: none;
+	padding: 0;
+	position: absolute;
+}
+.header>ul li:hover ul{
+	display: block;
+
 }
 .carousel_head_banner{
 	width: 100vw;

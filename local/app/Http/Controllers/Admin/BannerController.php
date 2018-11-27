@@ -25,11 +25,13 @@ class BannerController extends Controller
 //        dd($video);
         $banner->banner_video = $request->banner_video;
         if ($request->banner_video != null ) {
+            if ($video != null){
+                $filename = time() . '.' . $video->getClientOriginalExtension();
+                $banner->banner_image = $filename;
+                $path = public_path().'/home/image';
+                $video->move($path, $filename);
+            }
 
-            $filename = time() . '.' . $video->getClientOriginalExtension();
-            $banner->banner_image = $filename;
-            $path = public_path().'/home/image';
-            $video->move($path, $filename);
         }
         else{
             if( $request->has('banner_image') ){
@@ -55,9 +57,8 @@ class BannerController extends Controller
 		$banner->banner_position = $request->banner_position;
         $banner->banner_video = $request->banner_video;
         $video = $request->file('file');
-        dd($request->all());
-        if ($request->banner_video != null ) {
 
+        if ($request->banner_video != null ) {
             $filename = time() . '.' . $video->getClientOriginalExtension();
             $banner->banner_image = $filename;
             $path = public_path().'/home/image';

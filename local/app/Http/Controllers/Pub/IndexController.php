@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Pub;
 
 use App\Models\Content;
+use App\Models\Image;
 use App\Models\Location;
 use App\Models\Meeting;
 use App\Models\Member;
@@ -130,9 +131,9 @@ class IndexController extends Controller
     }
 
     public function getCommunity(){
-        $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        $data['banners'] = Banner::where('banner_position', Banner::POSITION_COMMUNITY)->get();
         if ($data['banners'] == null || count($data['banners']) == 0){
-            $data['banners'] = Banner::where('banner_position', Banner::POSITION_COMMUNITY)->get();
+            $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
         }
         $data['ceo'] = Member::where('ceo', 1)->first();
         $data['member'] = Member::where('ceo', 0)->get();
@@ -164,5 +165,17 @@ class IndexController extends Controller
             $message->to($register->register_email,  $register->register_name)->subject('Zikzak confirmation!');
         });
         return back()->with('success','modal');
+    }
+
+    public function getLocation($id){
+        $data['banners'] = Banner::where('banner_position', Banner::POSITION_TRY_IT)->get();
+        if ($data['banners'] == null || count($data['banners']) == 0){
+            $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
+        }
+        $location = Location::find($id);
+        $data['images'] = Image::where('location_id', $id)->get();
+        return view('public.location', $data);
+        dd($location);
+
     }
 }

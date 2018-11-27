@@ -22,7 +22,9 @@ Route::group(['namespace' => 'Pub'], function() {
     Route::get('virtual','IndexController@getVirtualRoom');
     Route::get('community','IndexController@getCommunity');
     Route::get('experience','IndexController@getExperience');
+    Route::get('location/{id}','IndexController@getLocation');
     Route::post('register','IndexController@postRegister');
+
 });
 
 Route::group(['namespace' => 'Admin'], function() {
@@ -120,6 +122,14 @@ Route::group(['namespace' => 'Admin'], function() {
             Route::get('add','MeetingController@getAdd');
             Route::get('delete/{id}','MeetingController@getDelete');
         });
+
+        Route::group(['prefix' => 'image'], function() {
+            Route::get('/','ImageController@getList');
+            Route::post('add','ImageController@postAdd');
+//            Route::get('add','ImageController@getAdd');
+            Route::get('delete/{id}','ImageController@getDelete');
+        });
+
 
         Route::group(['prefix' => 'register','middleware'=>'CheckAdmin'], function() {
             Route::get('/','RegisterController@getRegister');
