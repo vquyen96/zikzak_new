@@ -39,7 +39,7 @@ class BannerController extends Controller
                     File::delete('local/storage/app/public/home/image/'.$image,'local/storage/app/public/home/image/resized-'.$image);
                 }
 
-                $banner->banner_image = saveImage([$request->banner_image],100,'public/home/image');
+                $banner->banner_image = saveImage([$request->banner_image],1920,'public/home/image');
             }
 //            $banner->banner_image = saveImage([$request->banner_image],100,'public/home/image');
         }
@@ -65,7 +65,7 @@ class BannerController extends Controller
             $video->move($path, $filename);
         }
         else{
-            $banner->banner_image = saveImage([$request->banner_image],100,'public/home/image');
+            $banner->banner_image = saveImage([$request->banner_image],1920,'public/home/image');
         }
 		$banner->save();
 		return back();

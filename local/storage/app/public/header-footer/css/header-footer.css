@@ -308,6 +308,7 @@
 }
 .bannerHead{
 	margin-bottom: 60px;
+	position: relative;
 }
 .bannerHead:after{
 	content: '';
@@ -316,7 +317,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 400px;
+	height: 20%;
 	background-image: linear-gradient(#0025, #fff0);
 }
 .header{
@@ -474,6 +475,20 @@ li.active {
 .carousel-indicators{
 	z-index: 1;
 }
+
+.btn_playvideo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 100px;
+	cursor: pointer;
+}
+/*video[poster]{*/
+	/*height:100%;*/
+	/*width:100%;*/
+/*}*/
 @media screen and (max-width: 768px){
 	.show768{
 		display: block;
@@ -484,10 +499,10 @@ li.active {
 	.carousel_head_banner:after{
 		padding-top: 60vh;
 	}
-	.bannerHead:after{
-		height: 30vh;
+	/*.bannerHead:after{*/
+		/*height: 30vh;*/
 
-	}
+	/*}*/
 
 	.paginate_center {
 		overflow: auto;

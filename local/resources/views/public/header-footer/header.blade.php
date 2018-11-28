@@ -10,13 +10,26 @@
 				@foreach($banners as $key=>$banner)
 					<div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
 						@if($banner->banner_video == 'on')
-							<video width="100%" autoplay muted loop >
+							<video width="100%" autoplay muted loop playsinline id="video_header">
 								<source src="{{ asset('local/public/home/image/'.$banner->banner_image) }}" type="video/mp4">
 								<source src="mov_bbb.ogg" type="video/ogg">
 								Trình duyệt không hỗ trợ
 							</video>
+							<div class="btn_playvideo">
+								<i class="fas fa-volume-up"></i>
+							</div>
+							{{--<video width="100%" autoplay loop playsinline controls>--}}
+								{{--<source src="home/image/Anh Dech Can Gi Nhieu Ngoai Em - Den_ Vu [320kbps_MP3].mp3" type="video/mp4">--}}
+								{{--<source src="mov_bbb.ogg" type="video/ogg">--}}
+								{{--Trình duyệt không hỗ trợ--}}
+							{{--</video>--}}
 						@else
 							<div class="carousel_head_banner" style="background: url('home/image/{{ $banner->banner_image }}') no-repeat center /cover"></div>
+							{{--<video width="100%" autoplay muted loop playsinline controls>--}}
+								{{--<source src="home/image/Anh Dech Can Gi Nhieu Ngoai Em - Den_ Vu [320kbps_MP3].mp3" type="video/mp4">--}}
+								{{--<source src="mov_bbb.ogg" type="video/ogg">--}}
+								{{--Trình duyệt không hỗ trợ--}}
+							{{--</video>--}}
 						@endif
 					</div>
 				@endforeach

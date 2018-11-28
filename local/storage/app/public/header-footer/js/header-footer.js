@@ -12,6 +12,13 @@ $(document).ready(function(){
 	$('.btn_show_nav').click(function(){
 		$('.header_mobi_nav').slideToggle();
 	});
+	$('.btn_playvideo').click(function () {
+        // $('#video_header').play();
+        // $('video').prop('muted',false);
+        $('video').prop('muted',false);
+        // $('#video_header')[0].play();
+        $(this).hide();
+    });
 	setTimeout(function () {
         // $('video').prop('muted',false);
     },3000);

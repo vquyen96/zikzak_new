@@ -110,6 +110,11 @@ $(document).ready(function(){
     }else{
       $(this).parent().css('max-height', $(this).outerHeight() + 42 );
     }
+
+    $(document).on('click', 'video', function () {
+        console.log('muted_offf');
+        $('video').prop('muted',false);
+    })
     
   });
 });
