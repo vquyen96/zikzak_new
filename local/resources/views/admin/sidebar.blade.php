@@ -13,7 +13,7 @@
 		<li class=""><a @if( Request::segment(2)==null ) class="active" @endif href="{{ asset('admin') }}"><i class="fas fa-tachometer-alt"></i> <span>Home</span></a></li>
 		<li class=""><a @if( Request::segment(2)=='user' ) class="active" @endif href="{{ asset('admin/user') }}"><i class="fas fa-users"></i> <span>User</span></a></li>
 		<li class=""><a @if( Request::segment(2)=='banner' ) class="active" @endif href="{{ asset('admin/banner') }}"><i class="far fa-image"></i> <span>Banner</span></a></li>
-		<li class=""><a @if( Request::segment(2)=='space' ) class="active" @endif href="{{ asset('admin/space') }}"><i class="fas fa-home"></i> <span>Không gian ZikZak</span></a></li>
+		{{--<li class=""><a @if( Request::segment(2)=='space' ) class="active" @endif href="{{ asset('admin/space') }}"><i class="fas fa-home"></i> <span>Không gian ZikZak</span></a></li>--}}
 		<li class=""><a @if( Request::segment(2)=='pack' ) class="active" @endif href="{{ asset('admin/pack') }}"><i class="fas fa-box"></i> <span>Gói sản phẩm</span></a></li>
 		<li class=""><a @if( Request::segment(2)=='news' ) class="active" @endif href="{{ asset('admin/news') }}"><i class="far fa-newspaper"></i> <span>Tin tức</span></span></a></li>
 		<li class=""><a @if( Request::segment(2)=='register' ) class="active" @endif href="{{ asset('admin/register') }}"><i class="fab fa-wpforms"></i> <span>Đăng ký</span></a></li>

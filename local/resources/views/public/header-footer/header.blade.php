@@ -129,3 +129,6 @@
 		</div>
 	</div>
 </div>
+<div class="content_left">
+	— Your First Place After Home
+</div>

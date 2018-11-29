@@ -489,7 +489,21 @@ li.active {
 	/*height:100%;*/
 	/*width:100%;*/
 /*}*/
+
+.content_left {
+	font-size: 18px;
+	color: #5099df;
+	transform: rotate(-90deg);
+	position: fixed;
+	left: -55px;
+	bottom: 200px;
+	z-index: 2;
+	font-weight: 500;
+}
 @media screen and (max-width: 768px){
+	.content_left{
+		display: none;
+	}
 	.show768{
 		display: block;
 	}

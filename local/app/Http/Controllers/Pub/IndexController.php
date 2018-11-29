@@ -172,7 +172,7 @@ class IndexController extends Controller
         if ($data['banners'] == null || count($data['banners']) == 0){
             $data['banners'] = Banner::where('banner_position', Banner::POSITION_HOME)->get();
         }
-        $location = Location::find($id);
+        $data['location'] = Location::find($id);
         $data['images'] = Image::where('location_id', $id)->get();
         return view('public.location', $data);
         dd($location);

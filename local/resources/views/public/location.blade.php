@@ -14,11 +14,20 @@
             display: block;
             padding-top: 65%;
         }
+        .modal-content:after{
+            content: '';
+            display: block;
+            padding-top: 65%;
+        }
+        .exp_content {
+            font-weight: 500;
+        }
     </style>
 @stop
 
 @section('javascript')
     <script type="text/javascript" src="virtual/js/virtual.js"></script>
+    <script type="text/javascript" src="base/js/jquery-imagepreviewer.min.js"></script>
     <script type="text/javascript" src="base/js/owl.carousel.min.js"></script>
     @if( Session::has('success') )
         <script type="text/javascript" src="base/js/modal.js"></script>
@@ -30,22 +39,24 @@
                 margin:0,
                 responsiveClass:true,
                 responsive:{
-                    0:{
+                    400:{
                         items:1,
-                        nav:true
                     },
                     600:{
                         items:3,
-                        nav:false
                     },
                     1000:{
                         items:5,
-                        nav:true,
-                        loop:false
                     }
                 }
             })
         });
+        $(document).on('click', '.carousel_image_hover_zoom', function () {
+            var url = $(this).find('span').text();
+            $('.modal').find('.modal-content').attr('style', 'background: url("'+url+'") no-repeat center /cover ');
+            $('.modal').modal();
+        })
+
     </script>
 @stop
 
@@ -137,9 +148,10 @@
         </div>
         <div class="owl-carousel">
             @foreach( $images as $image)
-            <div class="carousel_image" style="background: url('../public/home/image/resized-{{$image->url}}') no-repeat center /cover">
+            <div class="carousel_image" style="background: url('{{ asset('local/storage/app/public/home/image/resized-'.$image->url) }}') no-repeat center /cover">
                 <div class="carousel_image_hover">
                     <div class="carousel_image_hover_zoom">
+                        <span class="d-none">{{ asset('local/storage/app/public/home/image/'.$image->url) }}</span>
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
@@ -154,15 +166,21 @@
                         <div class="exp_h2">
                             Our locations
                         </div>
-                        @foreach( $locations as $item)
-                            <div class="exp_h3 border_bot right">
-                                {{ $item->name }}
-                            </div>
-                            <div class="exp_content">
-                                {!! $item->content !!}
-                            </div>
 
-                        @endforeach
+                        <div class="exp_h3 border_bot right">
+                            {{ $location->name }}
+                        </div>
+                        <div class="exp_content">
+                            {!! $location->content !!}
+                        </div>
+                        <div class="exp_content">
+                            Tel: {!! $location->tel !!}
+                        </div>
+                        <div class="exp_content">
+                            Email: {!! $location->email !!}
+                        </div>
+
+
 
                     </div>
                 </div>
@@ -195,11 +213,7 @@
                             {{--</select>--}}
                             {{--</div>--}}
                             <div class="exp_input">
-                                <select name="location" id="">
-                                    <option value="" disabled selected>Location (required)</option>
-                                    <option value="Hồ Chí Minh">Hồ Chí Minh</option>
-                                    <option value="Nha Trang">Nha Trang</option>
-                                </select>
+                                <input type="text" class="d-none" name="location" placeholder="" required value="{{ $location->name }}">
 
                             </div>
                             <div class="exp_button">
@@ -211,6 +225,12 @@
             </div>
         </div>
     </section>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" >
 
+            </div>
+        </div>
+    </div>
 @stop
 
